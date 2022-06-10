@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'syalafudin.dart';
+
 
 void main() {
   runApp(const MyApp());
