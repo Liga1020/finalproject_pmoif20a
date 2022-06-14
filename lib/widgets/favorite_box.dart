@@ -1,108 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:finalproject_pmoif20a_nurhakim/theme/color.dart';
-import 'package:finalproject_pmoif20a_nurhakim/widgets/favorite_box.dart';
-import 'custom_image.dart';
 
-class FeatureItem extends StatelessWidget {
-  FeatureItem(
+class FavoriteBox extends StatelessWidget {
+  FavoriteBox(
       {Key? key,
-        required this.data,
-        this.width = 280,
-        this.height = 300,
+        this.bgColor = Colors.white,
         this.onTap,
-        this.onTapFavorite})
+        this.isFavorited = false,
+        this.borderColor = Colors.transparent,
+        this.radius = 50,
+        this.size = 18,
+        this.padding = 8})
       : super(key: key);
-  final data;
-  final double width;
-  final double height;
-  final GestureTapCallback? onTapFavorite;
+  final Color borderColor;
+  final Color? bgColor;
+  final bool isFavorited;
+  final double radius;
+  final double size;
+  final double padding;
   final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        width: width,
-        height: height,
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.only(bottom: 5, top: 5),
+      child: AnimatedContainer(
+        padding: EdgeInsets.all(padding),
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.fastOutSlowIn,
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(radius),
+          color: isFavorited ? red : Colors.white,
           boxShadow: [
             BoxShadow(
               color: shadowColor.withOpacity(0.1),
               spreadRadius: 1,
               blurRadius: 1,
-              offset: Offset(1, 1), // changes position of shadow
+              offset: Offset(0, 0), // changes position of shadow
             ),
           ],
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomImage(
-              data["image"],
-              width: double.infinity,
-              height: 190,
-              radius: 15,
-            ),
-            Container(
-              width: width - 20,
-              padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    data["name"],
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: textColor,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            data["type"],
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(color: labelColor, fontSize: 13),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            data["price"],
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                                color: primary,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                      FavoriteBox(
-                        size: 16,
-                        onTap: onTapFavorite,
-                        isFavorited: data["is_favorited"],
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
+        child: SvgPicture.asset(
+          isFavorited
+              ? "assets/icons/favorited.svg"
+              : "assets/icons/favorite.svg",
+          color: isFavorited ? Colors.white : primary,
+          width: size,
+          height: size,
         ),
       ),
     );
