@@ -25,6 +25,9 @@ List cities = [
   {"name": "Purwokerto", "icon": "assets/icons/home.svg"},
   {"name": "Bali", "icon": "assets/icons/home.svg"},
   {"name": "Wonosobo", "icon": "assets/icons/home.svg"},
+  {"name": "Papua", "icon": "assets/icons/home.svg"},
+  {"name": "Nusa Tenggara Timur", "icon": "assets/icons/home.svg"},
+  {"name": "Nusa Tenggara Barat", "icon": "assets/icons/home.svg"},
 ];
 
 List<String> albumImages = [
@@ -163,5 +166,47 @@ List recommends = [
     "is_favorited": false,
     "description":
     "Taman Mini Indonesia Indah (TMII) merupakan suatu kawasan taman wisata bertema budaya Indonesia di Jakarta Timur.",
+  },
+  {
+    "id": 113,
+    "name": "Labuan Bajo",
+    "image":
+    "https://img.jakpost.net/c/2017/08/02/2017_08_02_30495_1501654303._large.jpg",
+    "price": "\IDR 80000",
+    "type": categories[2]["name"],
+    "rate": "4.5",
+    "location": "Nusa Tenggara Timur",
+    "is_favorited": false,
+    "album_images": albumImages,
+    "description":
+    "Labuan Bajo merupakan ibu kota Kabupaten Manggarai Barat yang memiliki letak geografis yang sangat strategis, dimana posisi Labuan Bajo berada di bagian barat pulau Flores."
+  },
+  {
+    "id": 114,
+    "name": "Puncak Jaya",
+    "image":
+    "https://puncakjayakab.go.id/wp-content/uploads/2018/09/GUNUNG-PUNCAK-JAYA-PAPUA-2.jpg",
+    "price": "\IDR 100000",
+    "type": categories[2]["name"],
+    "rate": "4.5",
+    "location": "Papua",
+    "is_favorited": false,
+    "album_images": albumImages,
+    "description":
+    "Puncak Jaya atau Piramida Carstensz mempunyai ketinggian 4.884 mdpl dan di sekitarnya terdapat gletser dengan nama yang sama yakni gletser Carstensz, satu-satunya gletser tropika di Indonesia, yang tersisa dan secara perlahan mulai menipis akibat pemanasan global."
+  },
+  {
+    "id": 115,
+    "name": "Gili Island",
+    "image":
+    "https://www.almarik-lombok.com/wp-content/uploads/2017/01/bidreye2-1024x512.jpg",
+    "price": "\IDR 100000",
+    "type": categories[2]["name"],
+    "rate": "4.5",
+    "location": "Nusa Tenggara Barat",
+    "is_favorited": false,
+    "album_images": albumImages,
+    "description":
+    "Gili Island is a popular destination in Indonesia. Gili Islands located in the north west of Lombok, featuring three small, coral fringed islands; Gili Air, Gili Meno & Gili Trawangan, each with superb, white sandy beaches, clear water, coral reefs, brilliantly colored fish and the best snorkeling on Lombok."
   },
 ];
