@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color bgColor = Color(0xff201520);
+Color bgColor = Color(0xff4d6fe3);
 Color bgNavColor = Color(0xff22151F);
 Color primaryColor = Color(0xffEFE3C8);
 Color secondaryColor = Color(0xff38232A);
