@@ -1,5 +1,5 @@
-import 'package:coffee_shop/pages/front_page.dart';
-import 'package:coffee_shop/routes/app_routes.dart';
+import 'package:finalproject_pmoif20a_nurhakim/pages/front_page.dart';
+import 'package:finalproject_pmoif20a_nurhakim/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
