@@ -1,4 +1,4 @@
-import 'package:coffee_shop/controllers/cart_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/cart_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../themes/themes.dart';

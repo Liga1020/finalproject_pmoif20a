@@ -1,4 +1,4 @@
-import 'package:coffee_shop/pages/home_page.dart';
+import 'package:finalproject_pmoif20a_nurhakim/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 import '../themes/themes.dart';
