@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'dart:math';
-import 'package:coffee_shop/controllers/coffee_controller.dart';
-import 'package:coffee_shop/themes/themes.dart';
-import 'package:coffee_shop/widgets/get_photo_buttons.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
+import 'package:finalproject_pmoif20a_nurhakim/widgets/get_photo_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
