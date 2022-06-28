@@ -1,8 +1,8 @@
-import 'package:coffee_shop/controllers/coffee_controller.dart';
-import 'package:coffee_shop/routes/routes_name.dart';
-import 'package:coffee_shop/themes/themes.dart';
-import 'package:coffee_shop/widgets/cofffee_card.dart';
-import 'package:coffee_shop/widgets/empty_list.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/routes/routes_name.dart';
+import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
+import 'package:finalproject_pmoif20a_nurhakim/widgets/cofffee_card.dart';
+import 'package:finalproject_pmoif20a_nurhakim/widgets/empty_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
