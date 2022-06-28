@@ -1,6 +1,6 @@
-import 'package:finalproject_pmoif20a_nurhakim/controllers/cart_controller.dart';
-import 'package:finalproject_pmoif20a_nurhakim/pages/cart_page.dart';
-import 'package:finalproject_pmoif20a_nurhakim/pages/home_page.dart';
+import 'package:finalproject_pmoif20a_nurhakimsuryaa/controllers/cart_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakimsuryaa/pages/cart_page.dart';
+import 'package:finalproject_pmoif20a_nurhakimsuryaa/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../themes/themes.dart';

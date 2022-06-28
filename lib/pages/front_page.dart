@@ -1,5 +1,5 @@
-import 'package:finalproject_pmoif20a_nurhakim/controllers/users_controller.dart';
-import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
+import 'package:finalproject_pmoif20a_nurhakimsuryaa/controllers/users_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakimsuryaa/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
