@@ -1,4 +1,4 @@
-import 'package:coffee_shop/pages/seller/add_coffee.dart';
+import 'package:finalproject_pmoif20a_nurhakim/pages/seller/add_coffee.dart';
 import 'package:get/get.dart';
 import 'routes_name.dart';
 import '../pages/front_page.dart';
