@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:coffee_shop/models/coffee_model.dart';
-import 'package:coffee_shop/routes/routes_name.dart';
-import 'package:coffee_shop/themes/themes.dart';
+import 'package:finalproject_pmoif20a_nurhakim/models/coffee_model.dart';
+import 'package:finalproject_pmoif20a_nurhakim/routes/routes_name.dart';
+import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';

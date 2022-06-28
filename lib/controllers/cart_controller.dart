@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:coffee_shop/models/cart_model.dart';
+import 'package:finalproject_pmoif20a_nurhakim/models/cart_model.dart';
 import 'package:get/get.dart';
 
 class CartController extends GetxController {
