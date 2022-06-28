@@ -13,12 +13,13 @@ class HomePage extends StatelessWidget {
     final coffeeC = Get.put(CoffeeController());
 
     final List<String> imgList = [
-      'https://media.istockphoto.com/photos/barista-making-latte-art-shot-focus-in-cup-of-milk-and-coffee-vintage-picture-id1282882269?b=1&k=20&m=1282882269&s=170667a&w=0&h=F9y-c5Z7hmiB-dPF7cpb6c_0JJvzQtj7ki9I3recuHs=',
-      'https://media.istockphoto.com/photos/barista-preparing-to-test-and-inspecting-the-quality-of-coffee-picture-id1284116251?b=1&k=20&m=1284116251&s=170667a&w=0&h=W3bkq3BplVPXWoCaSQnZ41iAaNLA1004Jj0R02B0kFo=',
-      'https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-      'https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29mZmVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-      'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+      'http://1.bp.blogspot.com/-lLZS08knx2c/VUTvU--RhyI/AAAAAAAAABU/BEIJfxIEFIU/s1600/Natural-Beauty-Sunrise-in-Sikunir-Dieng-Central-Java-Amazing-Beautiful-Natural-Scenery.jpg',
+      'http://1.bp.blogspot.com/-Soip-FVPDUI/UWZtxRLHNTI/AAAAAAAAFec/5Ys726n9zfU/s1600/Telaga+warna+dieng+-+Wonosobo,+Jawa+TImur.JPG',
+      'https://cdn.antaranews.com/cache/800x533/2021/07/29/IMG-20210727-WA0008.jpg',
+      'https://1.bp.blogspot.com/-fSAvypm80bk/Vhh6Cq4tc4I/AAAAAAAABC4/CgAiYwFAIKg/s1600/Mountain%2BPrau.jpg',
+      'https://1.bp.blogspot.com/-KqnPn-mlOjQ/YAJg7te7GaI/AAAAAAAAHic/gO6Wca8hkCwKjDIa4JuAlBPQQUhcGb_NACLcBGAsYHQ/w400-h225/2017-06-29-5909.jpg',
+      'https://4.bp.blogspot.com/-F98Cih5L2lE/WmNVhTncziI/AAAAAAAAAII/0Ip-3BAg_T0lShUvWwGFMPtqWexibtDtACEwYBhgL/s1600/2.JPG',
+      'https://cdn-2.tstatic.net/travel/foto/bank/images/candi-arjuna_20170517_203312.jpg'
     ];
 
     Widget imageCarousel() {
@@ -100,7 +101,7 @@ class HomePage extends StatelessWidget {
                 ),
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(
-                    'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80',
+                    'https://static.vecteezy.com/system/resources/previews/000/378/133/non_2x/edit-profile-vector-icon.jpg',
                   ),
                   radius: 30,
                 ),
@@ -118,7 +119,7 @@ class HomePage extends StatelessWidget {
           top: 24,
         ),
         child: Text(
-          'Pilih Kopi Anda',
+          'Pilih Wisata Anda',
           style: rosarivo.copyWith(
             color: primaryColor,
             fontSize: 22,
