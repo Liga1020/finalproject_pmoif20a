@@ -54,7 +54,7 @@ class _CartTileState extends State<CartTile> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  cartC.cartList[widget.index].coffee,
+                  cartC.cartList[widget.index].wisata,
                   style: rosarivo.copyWith(
                     color: Colors.white,
                   ),
