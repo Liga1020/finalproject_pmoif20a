@@ -4,8 +4,8 @@ abstract class RouteName {
   static const home_page = '/home-page';
   static const detail_page = '/detail-page';
   static const seller_page = '/seller-page';
-  static const addCoffee_page = '/addCoffee-page';
-  static const editCoffee_page = '/editCoffee-page';
+  static const addWisata_page = '/addWisata-page';
+  static const editWisata_page = '/editWisata-page';
 
 
 
