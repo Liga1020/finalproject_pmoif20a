@@ -103,7 +103,7 @@ class CartPage extends StatelessWidget {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        'Coffee Price',
+                        'Wisata Price',
                         style: rosarivo.copyWith(
                           color: Colors.white,
                         ),
@@ -123,7 +123,7 @@ class CartPage extends StatelessWidget {
                           )),
                       SizedBox(height: 8),
                       Obx(() => Text(
-                            '\Rp ${cartC.coffeePrice.value.toStringAsFixed(1)}',
+                            '\Rp ${cartC.wisataPrice.value.toStringAsFixed(1)}',
                             style: openSans.copyWith(
                               color: Colors.white,
                               fontWeight: semibold,

@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:finalproject_pmoif20a_nurhakim/controllers/cart_controller.dart';
-import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/wisata_controller.dart';
 import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,11 +8,11 @@ import 'package:get/get.dart';
 class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final coffeeC = Get.find<CoffeeController>();
+    final wisataC = Get.find<WisataController>();
     final cartC = Get.find<CartController>();
 
-    var coffeeId = Get.arguments as String;
-    final selectCoffee = coffeeC.selectedById(coffeeId);
+    var wisataId = Get.arguments as String;
+    final selectWisata = wisataC.selectedById(wisataId);
 
     Widget header() {
       return Container(
@@ -29,14 +29,14 @@ class DetailPage extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
                 color: Colors.grey,
-                image: (selectCoffee.imageUrl == '')
+                image: (selectWisata.imageUrl == '')
                     ? DecorationImage(
                         image: AssetImage('assets/image_photo.png'),
                         fit: BoxFit.cover,
                       )
                     : DecorationImage(
                         image: FileImage(
-                          File(selectCoffee.imageUrl),
+                          File(selectWisata.imageUrl),
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -78,13 +78,13 @@ class DetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //  Coffee Type
+
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    selectCoffee.coffee,
+                    selectWisata.wisata,
                     style: rosarivo.copyWith(
                       fontSize: 24,
                       color: Colors.white,
@@ -104,7 +104,7 @@ class DetailPage extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    selectCoffee.name,
+                    selectWisata.name,
                     style: rosarivo.copyWith(
                       fontSize: 16,
                       color: Colors.white,
@@ -120,7 +120,7 @@ class DetailPage extends StatelessWidget {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        selectCoffee.score.toString(),
+                        selectWisata.score.toString(),
                         style: rosarivo.copyWith(
                           fontSize: 12,
                           color: Colors.white,
@@ -137,7 +137,7 @@ class DetailPage extends StatelessWidget {
                 top: 8,
               ),
               child: Text(
-                selectCoffee.description,
+                selectWisata.description,
                 style: openSans.copyWith(
                   color: Colors.white,
                 ),
@@ -168,7 +168,7 @@ class DetailPage extends StatelessWidget {
                   ),
                   SizedBox(height: 9),
                   Text(
-                    '\Rp-${selectCoffee.price}',
+                    '\Rp-${selectWisata.price}',
                     style: openSans.copyWith(
                       color: Colors.white,
                       fontWeight: semibold,
@@ -185,9 +185,9 @@ class DetailPage extends StatelessWidget {
                 height: 45,
                 child: TextButton(
                   onPressed: () {
-                    cartC.addCart(selectCoffee.imageUrl, selectCoffee.coffee,
-                        selectCoffee.name, selectCoffee.price, 1);
-                    coffeeC.snackBar(
+                    cartC.addCart(selectWisata.imageUrl, selectWisata.wisata,
+                        selectWisata.name, selectWisata.price, 1);
+                    wisataC.snackBar(
                       'SUCCESS',
                       'Item added to cart',
                       bgColor,

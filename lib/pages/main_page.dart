@@ -9,7 +9,6 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cartC = Get.put(CartController());
-
     final currentIndex = cartC.currentIndex;
 
     final screens = [
@@ -37,7 +36,7 @@ class MainPage extends StatelessWidget {
                 width: 50,
                 height: 40,
                 child: Icon(
-                  Icons.coffee,
+                  Icons.book,
                 ),
               ),
               label: 'Home',

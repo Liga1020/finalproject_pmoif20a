@@ -29,9 +29,9 @@ class FrontPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Username',
+                  'Masukan Username',
                   style: rosarivo.copyWith(
-                    color: Colors.grey,
+                    color: Colors.black,
                     fontSize: 16,
                     fontWeight: medium,
                   ),
@@ -42,15 +42,15 @@ class FrontPage extends StatelessWidget {
                     controller: textUsername,
                     textInputAction: TextInputAction.next,
                     style: openSans.copyWith(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 16,
                     ),
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                     ),
                   ),
@@ -70,9 +70,9 @@ class FrontPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Password',
+                  'Masukan Password',
                   style: rosarivo.copyWith(
-                    color: Colors.grey,
+                    color: Colors.black,
                     fontSize: 16,
                     fontWeight: medium,
                   ),
@@ -86,15 +86,15 @@ class FrontPage extends StatelessWidget {
                     onEditingComplete: () =>
                         usersC.signIn(textUsername.text, textPassword.text),
                     style: openSans.copyWith(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 16,
                     ),
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                     ),
                   ),
@@ -132,7 +132,7 @@ class FrontPage extends StatelessWidget {
                 Text(
                   'Don\'t have an account?',
                   style: rosarivo.copyWith(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: medium,
                   ),
                 ),
@@ -140,7 +140,7 @@ class FrontPage extends StatelessWidget {
                 Text(
                   'Sign Up',
                   style: rosarivo.copyWith(
-                    color: Colors.lightBlue,
+                    color: Colors.white,
                     fontWeight: medium,
                   ),
                 ),
