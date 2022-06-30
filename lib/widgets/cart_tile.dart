@@ -1,7 +1,7 @@
 import 'package:coffee_shop/controllers/cart_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../themes/themes.dart';
+import '../themes.dart';
 import 'dart:io';
 
 class CartTile extends StatefulWidget {

@@ -1,17 +1,38 @@
-import 'package:coffee_shop/pages/front_page.dart';
-import 'package:coffee_shop/routes/app_routes.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'SignIn.dart';
+import 'SignUp.dart';
+import 'screens/root_app.dart';
+import 'theme/color.dart';
+import 'package:firebaselogin/SignIn.dart';
+import 'package:firebaselogin/SignUp.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'HomePage.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FrontPage(),
-      getPages: AppRoutes.pages,
+      title: 'Hotel Booking',
+      theme: ThemeData(
+        primaryColor: primary,
+      ),
+
+      home: const RootApp(),
+      routes: {
+        '/home': (BuildContext context) => HomePage(),
+        '/signin': (BuildContext context) => SignIn(),
+        '/signup': (BuildContext context) => SignUp()
+      },
     );
   }
 }
