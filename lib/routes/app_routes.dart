@@ -30,12 +30,12 @@ class AppRoutes {
       transition: Transition.downToUp,
     ),
     GetPage(
-      name: RouteName.addCoffee_page,
+      name: RouteName.addWisata_page,
       page: () => AddWisata(),
       transition: Transition.downToUp,
     ),
     GetPage(
-      name: RouteName.editCoffee_page,
+      name: RouteName.editWisata_page,
       page: () => EditWisata(),
       transition: Transition.downToUp,
     ),
