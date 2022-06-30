@@ -15,12 +15,12 @@ class CartController extends GetxController {
   var taxCharges = 0.0.obs;
   var grandTotalPrice = 0.0.obs;
 
-  void addCart(imageUrl, coffee, name, price, item) {
+  void addCart(imageUrl, wisata, name, price, item) {
     cartList.add(
       CartModel(
         id: Random().nextInt(999).toString(),
         imageUrl: imageUrl,
-        coffee: coffee,
+        wisata: wisata,
         name: name,
         price: price,
         item: item,
