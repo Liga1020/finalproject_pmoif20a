@@ -5,7 +5,7 @@ import 'package:coffee_shop/controllers/users_controller.dart';
 import 'package:coffee_shop/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../themes/themes.dart';
+import '../themes.dart';
 
 class CoffeeCard extends StatelessWidget {
   final int index;
