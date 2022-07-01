@@ -13,8 +13,8 @@ class UsersController extends GetxController {
       Get.toNamed(RouteName.main_page);
     } else {
       Get.defaultDialog(
-        title: 'INVALID USERNAME',
-        middleText: 'Username doesn\'t exist',
+        title: 'Username Salah',
+        middleText: 'Username Tidak Ada',
       );
     }
   }

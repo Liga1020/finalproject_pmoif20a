@@ -31,7 +31,7 @@ class WisataController extends GetxController {
     } else {
       snackBar(
         'NO IMAGE',
-        'Please choose an image',
+        'Silahkan Pilih Gambar',
         bgColor,
         bgColor,
         Colors.redAccent,
@@ -86,7 +86,7 @@ class WisataController extends GetxController {
           .then(
             (value) => snackBar(
           'SUCCESS',
-          'New item added',
+          'Item telah ditambahkan',
           bgColor,
           bgColor,
           primaryColor,

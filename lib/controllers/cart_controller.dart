@@ -56,7 +56,7 @@ class CartController extends GetxController {
 
   void payNowDispose() {
     currentIndex.value = 0;
-    // cara menghapus semua isi list
+
     cartList.removeWhere((element) => element.id == element.id);
   }
 }
