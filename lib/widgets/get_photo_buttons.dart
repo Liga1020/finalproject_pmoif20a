@@ -1,4 +1,4 @@
-import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/wisata_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
 import 'package:get/get.dart';
@@ -12,7 +12,7 @@ class GetPhotoButtons extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final coffeeC = Get.find<CoffeeController>();
+    final coffeeC = Get.find<WisataController>();
 
     return Container(
       width: 140,

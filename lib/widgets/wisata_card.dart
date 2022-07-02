@@ -1,29 +1,29 @@
 import 'dart:io';
 import 'package:finalproject_pmoif20a_nurhakim/controllers/cart_controller.dart';
-import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/wisata_controller.dart';
 import 'package:finalproject_pmoif20a_nurhakim/controllers/users_controller.dart';
 import 'package:finalproject_pmoif20a_nurhakim/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../themes/themes.dart';
 
-class CoffeeCard extends StatelessWidget {
+class WisataCard extends StatelessWidget {
   final int index;
-  CoffeeCard(this.index);
+  WisataCard(this.index);
 
   @override
   Widget build(BuildContext context) {
-    final coffeeC = Get.find<CoffeeController>();
+    final wisataC = Get.find<WisataController>();
     final usersC = Get.find<UsersController>();
     final cartC = Get.put(CartController());
 
-    var id = coffeeC.coffeeList[index].id;
+    var id = wisataC.wisataList[index].id;
     var user = usersC.user.value;
 
     return GestureDetector(
       onTap: () {
         Get.toNamed(
-          (user == 'user') ? RouteName.detail_page : RouteName.editCoffee_page,
+          (user == 'user') ? RouteName.detail_page : RouteName.editWisata_page,
           arguments: id,
         );
       },
@@ -40,7 +40,7 @@ class CoffeeCard extends StatelessWidget {
             //  Image
             Stack(
               children: [
-                (coffeeC.coffeeList[index].imageUrl == '')
+                (wisataC.wisataList[index].imageUrl == '')
                     ? ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
@@ -53,7 +53,7 @@ class CoffeeCard extends StatelessWidget {
                     : ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.file(
-                    File(coffeeC.coffeeList[index].imageUrl),
+                    File(wisataC.wisataList[index].imageUrl),
                     width: 211,
                     height: 150,
                     fit: BoxFit.cover,
@@ -82,7 +82,7 @@ class CoffeeCard extends StatelessWidget {
                       ),
                       SizedBox(width: 4),
                       Text(
-                        '${coffeeC.coffeeList[index].score}',
+                        '${wisataC.wisataList[index].score}',
                         style: rosarivo.copyWith(
                           color: Colors.white,
                           fontSize: 12,
@@ -96,8 +96,8 @@ class CoffeeCard extends StatelessWidget {
                   right: 0,
                   child: GestureDetector(
                     onTap: () {
-                      coffeeC.deleteItem(id).then(
-                            (value) => coffeeC.snackBar(
+                      wisataC.deleteItem(id).then(
+                            (value) => wisataC.snackBar(
                           'SUCCESS',
                           'Item deleted',
                           bgColor,
@@ -132,7 +132,7 @@ class CoffeeCard extends StatelessWidget {
             // Name
             Container(
               child: Text(
-                coffeeC.coffeeList[index].name,
+                wisataC.wisataList[index].name,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
                 style: rosarivo.copyWith(color: Colors.white, fontSize: 16),
@@ -149,7 +149,7 @@ class CoffeeCard extends StatelessWidget {
                 children: [
                   SizedBox(width: 22),
                   Text(
-                    '\Rp ${coffeeC.coffeeList[index].price}',
+                    '\Rp ${wisataC.wisataList[index].price}',
                     style: rosarivo.copyWith(
                       color: Colors.white,
                       fontWeight: semibold,
@@ -161,13 +161,13 @@ class CoffeeCard extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       cartC.addCart(
-                        coffeeC.coffeeList[index].imageUrl,
-                        coffeeC.coffeeList[index].coffee,
-                        coffeeC.coffeeList[index].name,
-                        coffeeC.coffeeList[index].price,
+                        wisataC.wisataList[index].imageUrl,
+                        wisataC.wisataList[index].wisata,
+                        wisataC.wisataList[index].name,
+                        wisataC.wisataList[index].price,
                         1,
                       );
-                      coffeeC.snackBar(
+                      wisataC.snackBar(
                         'SUCCESS',
                         'Item added to cart',
                         bgColor,

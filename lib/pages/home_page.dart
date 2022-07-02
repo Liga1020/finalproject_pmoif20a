@@ -1,7 +1,7 @@
-import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/wisata_controller.dart';
 import 'package:finalproject_pmoif20a_nurhakim/routes/routes_name.dart';
 import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
-import 'package:finalproject_pmoif20a_nurhakim/widgets/cofffee_card.dart';
+import 'package:finalproject_pmoif20a_nurhakim/widgets/wisata_card.dart';
 import 'package:finalproject_pmoif20a_nurhakim/widgets/empty_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +10,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final coffeeC = Get.put(CoffeeController());
+    final wisataC = Get.put(WisataController());
 
     final List<String> imgList = [
       'http://1.bp.blogspot.com/-lLZS08knx2c/VUTvU--RhyI/AAAAAAAAABU/BEIJfxIEFIU/s1600/Natural-Beauty-Sunrise-in-Sikunir-Dieng-Central-Java-Amazing-Beautiful-Natural-Scenery.jpg',
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                coffeeC.initialData();
+                wisataC.initialData();
               },
               child: Image.asset(
                 'assets/image_logo.png',
@@ -112,7 +112,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget coffeeTitle() {
+    Widget wisataTitle() {
       return Container(
         margin: EdgeInsets.only(
           left: 16,
@@ -129,9 +129,9 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget coffee() {
+    Widget wisata() {
       return Obx(
-        () => (coffeeC.jumlahCoffee == 0)
+        () => (wisataC.jumlahWisata == 0)
             ? EmptyList(size: 100)
             : Container(
                 margin: EdgeInsets.only(
@@ -147,9 +147,9 @@ class HomePage extends StatelessWidget {
                       mainAxisSpacing: 20),
                   primary: false,
                   shrinkWrap: true,
-                  itemCount: coffeeC.jumlahCoffee,
+                  itemCount: wisataC.jumlahWisata,
                   itemBuilder: (context, index) {
-                    return CoffeeCard(index);
+                    return WisataCard(index);
                   },
                 ),
               ),
@@ -163,8 +163,8 @@ class HomePage extends StatelessWidget {
           children: [
             header(),
             imageCarousel(),
-            coffeeTitle(),
-            coffee(),
+            wisataTitle(),
+            wisata(),
           ],
         ),
       ),

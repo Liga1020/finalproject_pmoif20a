@@ -1,32 +1,29 @@
 import 'dart:io';
-import 'package:finalproject_pmoif20a_nurhakim/controllers/coffee_controller.dart';
+import 'dart:math';
+import 'package:finalproject_pmoif20a_nurhakim/controllers/wisata_controller.dart';
 import 'package:finalproject_pmoif20a_nurhakim/themes/themes.dart';
 import 'package:finalproject_pmoif20a_nurhakim/widgets/get_photo_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-class EditCoffee extends StatelessWidget {
+class AddWisata extends StatelessWidget {
+  final TextEditingController textWisata = TextEditingController();
+  final TextEditingController textName = TextEditingController();
+  final TextEditingController textDescription = TextEditingController();
+  final TextEditingController textPrice = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    final coffeeC = Get.find<CoffeeController>();
-    final coffeeId = Get.arguments as String;
-    final selectCoffee = coffeeC.selectedById(coffeeId);
-
-    final TextEditingController textEditCoffee =
-        TextEditingController(text: selectCoffee.coffee);
-    final TextEditingController textEditName =
-        TextEditingController(text: selectCoffee.name);
-    final TextEditingController textEditDescription =
-        TextEditingController(text: selectCoffee.description);
-    final TextEditingController textEditPrice =
-        TextEditingController(text: selectCoffee.price);
+    final wisataC = Get.find<WisataController>();
 
     Widget arrowBack() {
       return Align(
         alignment: Alignment.topLeft,
         child: GestureDetector(
-          onTap: () => Navigator.pop(context),
+          onTap: () {
+            Navigator.pop(context);
+          },
           child: Container(
             margin: EdgeInsets.only(
               left: 16,
@@ -48,7 +45,7 @@ class EditCoffee extends StatelessWidget {
           child: Stack(
             children: [
               Obx(
-                () => (coffeeC.selectedImagePath.value == '')
+                () => (wisataC.selectedImagePath.value == '')
                     ? CircleAvatar(
                         backgroundImage: AssetImage(
                           'assets/image_photo.png',
@@ -57,7 +54,7 @@ class EditCoffee extends StatelessWidget {
                       )
                     : CircleAvatar(
                         backgroundImage: FileImage(
-                          File(coffeeC.selectedImagePath.value),
+                          File(wisataC.selectedImagePath.value),
                         ),
                         radius: 90,
                       ),
@@ -67,7 +64,7 @@ class EditCoffee extends StatelessWidget {
                 right: 0,
                 child: GestureDetector(
                   onTap: () {
-                      Get.dialog(
+                    Get.dialog(
                       Center(
                         child: Container(
                           margin: EdgeInsets.symmetric(horizontal: 32),
@@ -108,7 +105,7 @@ class EditCoffee extends StatelessWidget {
       );
     }
 
-    Widget coffee() {
+    Widget wisata() {
       return Container(
         margin: EdgeInsets.only(
           left: 16,
@@ -119,7 +116,7 @@ class EditCoffee extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Coffee',
+              'Wisata',
               style: rosarivo.copyWith(
                 color: Colors.grey,
                 fontSize: 16,
@@ -129,7 +126,7 @@ class EditCoffee extends StatelessWidget {
             Container(
               height: 25,
               child: TextField(
-                controller: textEditCoffee,
+                controller: textWisata,
                 textInputAction: TextInputAction.next,
                 style: openSans.copyWith(
                   color: Colors.white,
@@ -171,7 +168,7 @@ class EditCoffee extends StatelessWidget {
             Container(
               height: 25,
               child: TextField(
-                controller: textEditName,
+                controller: textName,
                 textInputAction: TextInputAction.next,
                 style: openSans.copyWith(
                   color: Colors.white,
@@ -213,7 +210,7 @@ class EditCoffee extends StatelessWidget {
             Container(
               height: 25,
               child: TextField(
-                controller: textEditDescription,
+                controller: textDescription,
                 textInputAction: TextInputAction.next,
                 style: openSans.copyWith(
                   color: Colors.white,
@@ -256,16 +253,16 @@ class EditCoffee extends StatelessWidget {
             Container(
               height: 25,
               child: TextField(
-                controller: textEditPrice,
+                controller: textPrice,
                 textInputAction: TextInputAction.done,
                 onEditingComplete: () {
-                  coffeeC.editItem(
-                    coffeeId,
-                    coffeeC.selectedImagePath.value,
-                    textEditCoffee.text,
-                    textEditName.text,
-                    textEditDescription.text,
-                    textEditPrice.text,
+                  wisataC.addItem(
+                    wisataC.selectedImagePath.value,
+                    textWisata.text,
+                    textName.text,
+                    textDescription.text,
+                    textPrice.text,
+                    Random().nextInt(10),
                   );
                 },
                 style: openSans.copyWith(
@@ -287,7 +284,7 @@ class EditCoffee extends StatelessWidget {
       );
     }
 
-    Widget edit() {
+    Widget add() {
       return Container(
         width: double.infinity,
         height: 45,
@@ -298,13 +295,13 @@ class EditCoffee extends StatelessWidget {
         ),
         child: TextButton(
           onPressed: () {
-            coffeeC.editItem(
-              coffeeId,
-              coffeeC.selectedImagePath.value,
-              textEditCoffee.text,
-              textEditName.text,
-              textEditDescription.text,
-              textEditPrice.text,
+            wisataC.addItem(
+              wisataC.selectedImagePath.value,
+              textWisata.text,
+              textName.text,
+              textDescription.text,
+              textPrice.text,
+              Random().nextInt(10),
             );
           },
           style: TextButton.styleFrom(
@@ -314,7 +311,7 @@ class EditCoffee extends StatelessWidget {
             backgroundColor: primaryColor,
           ),
           child: Text(
-            'Edit',
+            'Add',
             style: openSans.copyWith(
               color: bgColor,
               fontSize: 16,
@@ -332,14 +329,14 @@ class EditCoffee extends StatelessWidget {
           children: [
             arrowBack(),
             image(),
-            coffee(),
+            wisata(),
             name(),
             description(),
             price(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.1,
             ),
-            edit(),
+            add(),
           ],
         ),
       ),

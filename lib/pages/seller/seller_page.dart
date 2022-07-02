@@ -11,7 +11,7 @@ class SellerPage extends StatelessWidget {
       backgroundColor: bgColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.toNamed(RouteName.addCoffee_page);
+          Get.toNamed(RouteName.addWisata_page);
         },
         backgroundColor: primaryColor,
         child: Icon(

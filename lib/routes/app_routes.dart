@@ -1,8 +1,8 @@
-import 'package:finalproject_pmoif20a_nurhakim/pages/seller/add_coffee.dart';
+import 'package:finalproject_pmoif20a_nurhakim/pages/seller/add_wisata.dart';
 import 'package:get/get.dart';
 import 'routes_name.dart';
 import '../pages/front_page.dart';
-import '../pages/seller/edit_coffee.dart';
+import '../pages/seller/edit_wisata.dart';
 import '../pages/detail_page.dart';
 import '../pages/main_page.dart';
 import '../pages/seller/seller_page.dart';
@@ -30,13 +30,13 @@ class AppRoutes {
       transition: Transition.downToUp,
     ),
     GetPage(
-      name: RouteName.addCoffee_page,
-      page: () => AddCoffee(),
+      name: RouteName.addWisata_page,
+      page: () => AddWisata(),
       transition: Transition.downToUp,
     ),
     GetPage(
-      name: RouteName.editCoffee_page,
-      page: () => EditCoffee(),
+      name: RouteName.editWisata_page,
+      page: () => EditWisata(),
       transition: Transition.downToUp,
     ),
   ];
